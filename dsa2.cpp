@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Pair()
-{
+void Pair(){
     pair<int, int> p = {1, 2};
     cout << "Normal pair:" << p.first << " " << p.second << endl;
     // nested pair
@@ -13,8 +12,7 @@ void Pair()
     cout << "Array of pair" << pairArray[0].first << " " << pairArray[2].second << endl;
 }
 
-void Vector()
-{
+void Vector(){
     // single linked list is mantined for vector
     vector<int> v;
     v.push_back(0);
@@ -99,8 +97,7 @@ void Vector()
     v3.swap(v4);
 }
 
-void List()
-{
+void List(){
     // doubly linked list is mantained for list
     // inserting in the front is very cheap then vector
 
@@ -128,8 +125,7 @@ void List()
     // rest same as vector
 }
 
-void Deque()
-{
+void Deque(){
     deque<int> dq;
     dq.push_back(1);     // [1]
     dq.emplace_back(2);  // [1, 2]
@@ -144,8 +140,7 @@ void Deque()
     cout << a << " " << b;
 }
 
-void Stack()
-{
+void Stack(){
     stack<int> st;
     st.push(1);
     st.push(2);
@@ -162,8 +157,7 @@ void Stack()
     st1.swap(st2);
 }
 
-void Queue()
-{
+void Queue(){
     queue<int> q;
     q.push(1);
     q.push(2);
@@ -176,8 +170,7 @@ void Queue()
     cout << "After poping from queue  front:" << q.front();
 }
 
-void Priority_Queue()
-{
+void Priority_Queue(){
     priority_queue<int> pq;
     pq.push(5);
     pq.push(2);
@@ -326,6 +319,7 @@ bool comp(pair<int,int> p1,pair<int,int> p2){
     if(p1.first>p2.first)return true;
     return false;
 }
+
 void Extra(){
     //sort()
     int a[]={5,3,4,6,2,24,56,7};

@@ -55,6 +55,7 @@ bool isPalindrome(int i,string &s){
 
         return fib(n-1)+fib(n-2);
     }
+    
  int forfib(int n){
     if(n <= 1) return n;
     int a = 0, b = 1;

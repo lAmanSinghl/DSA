@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int missingNumberUsingXOR(int arr[], int n)
-{
+int missingNumberUsingXOR(int arr[], int n){
     int xor1 = 0, xor2 = 0;
     int n2 = n - 1;
     for (int i = 0; i < n2; i++)
@@ -14,8 +13,7 @@ int missingNumberUsingXOR(int arr[], int n)
     return xor1 ^ xor2;
 }
 
-int missingNumberUsingSum(int arr[], int n)
-{
+int missingNumberUsingSum(int arr[], int n){
     // Since it involves n², it may cause data overflow, so the XOR version is better.
     int sum = n * (n + 1) / 2;
     for (int i = 0; i < n - 1; i++)

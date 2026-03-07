@@ -42,6 +42,7 @@ int maxSubArray(vector<int>& nums) {
         //if you add negative you will decrease the value where as if you add positive you will be increasing it
         sum+=nums[i];
 
+        
         if(maxi<sum){
             maxi=sum;
             end=i;

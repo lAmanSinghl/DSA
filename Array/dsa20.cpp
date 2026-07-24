@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+    //majority element 1/3
     vector<int> majorityElement(vector<int>& nums) {
         int cnt1=0,cnt2=0,el1,el2;
         vector <int> ans;

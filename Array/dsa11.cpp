@@ -9,7 +9,7 @@ vector<int> twoSum(vector<int> &nums, int target)
     {
         int a = nums[i];
         int more = target - a;
-        cout<<"i:"<<a<<" "<<"j:"<<more<<endl;
+        // cout<<"i:"<<a<<" "<<"j:"<<more<<endl;
         if (mpp.find(more) != mpp.end())
         {
             return {i, mpp[more]};
@@ -48,21 +48,21 @@ int main()
         cin >> nums[i];
     }
 
-    // int target;
-    // cin >> target;
+    int target;
+    cin >> target;
 
-    // vector<int> ans = twoSum(nums, target);
+    vector<int> ans = twoSum(nums, target);
 
-    // if(ans.empty())
-    //     cout << "No pair found";
-    // else
-    //     cout << "Indices: " << ans[0] << " " << ans[1];
+    if(ans.empty())
+        cout << "No pair found";
+    else
+        cout << "Indices: " << ans[0] << " " << ans[1];
 
-    sortColors(nums);
+    // sortColors(nums);
     
-    for(int i :nums){
-        cout<<i<<" ";
-    }
+    // for(int i :nums){
+    //     cout<<i<<" ";
+    // }
 
     return 0;
 }

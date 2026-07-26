@@ -39,11 +39,11 @@ void optimal1merge(vector<int> &nums1, int n, vector<int> &nums2, int m)
         int right = left + gap;
         while (right < len)
         {
-            if (left < n && right >= m)
+            if (left < n && right >= n)
             {
                 swapIfGreater(nums1, nums2, left, right - n);
             }
-            else if (left <= n)
+            else if (left >= n)
             {
                 swapIfGreater(nums2, nums2, left-n, right - n);
 

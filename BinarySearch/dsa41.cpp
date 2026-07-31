@@ -31,6 +31,19 @@ int minEatingSpeed(vector<int> &piles, int h)
 
 int main()
 {
+    int n;
+    cin >> n;
+
+    vector<int> piles(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> piles[i];
+    }
+
+    int h;
+    cin >> h;
+
+    cout << minEatingSpeed(piles, h);
 
     return 0;
 }

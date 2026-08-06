@@ -17,7 +17,7 @@ int findSecondelarget(int arr[],int n){
 
 int findSecondeSmallest(int arr[],int n){
     int Smallest=arr[0];
-    int secondeSmallest=INT_MIN;
+    int secondeSmallest=INT_MAX;
    for(int i=0;i<n;i++){
     if(arr[i]<Smallest){
         secondeSmallest=Smallest;

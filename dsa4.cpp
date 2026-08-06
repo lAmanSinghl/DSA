@@ -12,25 +12,25 @@ void printName(int i, int n)
     printName(i + 1, n);
 }
 
-void backtrackPrint1toN(int m, int n)
+void backtrackPrintMtoN(int m, int n)
 {
 
     if (m < 1)
     {
         return;
     }
-    backtrackPrint1toN(m - 1, n);
+    backtrackPrintMtoN(m - 1, n);
     cout << m << " ";
 }
 
-void backtrackPrintNto1(int m, int n)
+void backtrackPrintNtoM(int m, int n)
 {
 
     if (m > n)
     {
         return;
     }
-    backtrackPrint1toN(m + 1, n);
+    backtrackPrintNtoM(m + 1, n);
     cout << m << " ";
 }
 

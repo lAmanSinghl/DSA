@@ -5,8 +5,8 @@ int findmax(vector<vector<int>> &mat ,int n,int m){
     int max=INT_MIN;
     int idx=-1;
     for(int i=0;i<n;i++){
-        if(max<mat[n][m]){
-            max=mat[n][m];
+        if(max<mat[i][m]){
+            max=mat[i][m];
             idx=i;
         }
     }

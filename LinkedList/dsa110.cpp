@@ -1,0 +1,69 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
+{
+    int sum=(l1->val+l2->val);
+    ListNode *head=new ListNode(sum%10);
+    int carry=sum/10;
+    ListNode *temp=head;
+    while(l1->next&&l2->next){
+        l1=l1->next;l2=l2->next;
+        sum=l1->val+l2->val+carry;
+        ListNode *newtemp=new ListNode(sum%10+carry);
+        carry=sum/10;
+        temp->next=newtemp;
+        temp=temp->next;
+    }
+    if(l1->next){
+        l1=l1->next;
+        sum=l1->val+carry;
+        ListNode *newtemp=new ListNode(sum%10+carry);
+        carry=sum/10;
+        temp->next=newtemp;
+        temp=temp->next;
+    }
+    if(l2->next){
+        l2=l2->next;
+        sum=l2->val+carry;
+        ListNode *newtemp=new ListNode(sum%10+carry);
+        carry=sum/10;
+        temp->next=newtemp;
+        temp=temp->next;
+    }
+    return head;
+}
+ListNode *addTwoNumbersSmarterStriver(ListNode *l1, ListNode *l2)
+{
+   ListNode *dummy=new ListNode(0);
+   ListNode *temp=dummy;
+   int carry=0;
+   while(l1||l2||carry){
+    int sum=carry;
+    if(l1){
+        sum+=l1->val;
+        l1=l1->next;
+    }
+    if(l2){
+        sum+=l2->val;
+        l2=l2->next;
+    }
+    ListNode *newtemp=new ListNode(sum%10);
+    temp->next=newtemp;
+    temp=temp->next;
+    carry=sum/10;
+   }
+   return dummy->next;
+}
+int main()
+{
+
+    return 0;
+}
